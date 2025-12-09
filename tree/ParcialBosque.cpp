@@ -158,14 +158,15 @@ int size(Bosque b){
         //error
     }
     if(b != NULL){
-        auxiliarParaNoRomperInvariante(b->root);
+        return auxiliarParaNoRomperInvariante(b->root);
     }
 }
 
-int auxiliarParaNoRomperInvariante(Nodo x){
+int auxiliarParaNoRomperInvariante(Nodo* x){
     if(x == NULL){
-        return 0
+        return 0;
     }else{
-        1+ auxiliarParaNoRomperInvariante(x->right) + auxiliarParaNoRomperInvariante (x->left)
+       return  1+ auxiliarParaNoRomperInvariante(x->right) + auxiliarParaNoRomperInvariante (x->left);
     }
 }
+
